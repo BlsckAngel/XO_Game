@@ -14,3 +14,5 @@ Re new Table example
         --+---+---
         7 | 8 | 9
         --+---+---
+Version 1.2
+	Check row and column of XO game
