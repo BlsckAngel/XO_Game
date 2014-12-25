@@ -17,7 +17,33 @@ int create_table(){
    
     return 0;
 }
-
+int CheckList() {
+    int stat = 0;
+    
+    if ((table[0][0]==table[1][1] && table[0][0]==table[2][2]) ||
+        (table[0][2]==table[1][1] && table[0][2]==table[2][0] )) {
+        printf("Congratulation player %c is winer\n",table[1][1]);
+        stat = 1;
+    }
+    // Check Row 1 column 1
+    if ((table[0][0]==table[0][1]&&table[0][0]==table[0][2]) ||
+            (table[0][0]==table[1][0]&&table[0][0]==table[2][0])) {
+        printf("Congratulation player %c is winer\n",table[0][0]);
+        stat = 1;
+    }
+    // Check Row 2 column 2
+    if ((table[1][0]==table[1][1]&&table[1][0]==table[1][2]) ||
+            (table[0][1]==table[1][1]&&table[0][1]==table[2][1])) {
+        printf("Congratulation player %c is winer\n",table[1][1]);
+        stat = 1;
+    }
+    if ((table[2][0]==table[2][1]&&table[2][0]==table[2][2]) ||
+         (table[0][2]==table[1][2]&&table[0][2]==table[2][2])) {
+        printf("Congratulation player %c is winer\n",table[2][2]);
+        stat =1;
+    }
+    return stat;
+}
 
 int main () {
  int player = 0;
